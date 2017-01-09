@@ -69,9 +69,9 @@ echo "Running configure" | indent
 ./configure  --prefix="$BUILD_DIR" --enable-libmp3lame --extra-cflags="-I$BUILD_DIR/include" --extra-ldflags="-L$BUILD_DIR/lib" --enable-shared --enable-pthreads --enable-gpl --enable-version3 --enable-hardcoded-tables --enable-avresample >/dev/null 2>&1
 
 echo "Running make with target install" | indent
-make install >/dev/null 2>&1
+make install
 echo "Running make with target distclean" | indent
-make distclean > /dev/null 2>&1 
+make distclean
 
 echo "-----> Caching build."
 mkdir -p $2
